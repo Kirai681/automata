@@ -15,7 +15,10 @@ class Item(Sprite):
             self.image = pygame.Surface((c.CELL_SIZE // 2, c.CELL_SIZE // 2))
             self.image.fill((255, 100, 100))
         else:
-            self.image = pygame.transform.scale(image, (c.CELL_SIZE, c.CELL_SIZE))
+            self.image = pygame.transform.scale(
+                image,
+                (c.CELL_SIZE, c.CELL_SIZE),
+            )
 
         self.rect = self.image.get_rect()
         self.rect.center = (
